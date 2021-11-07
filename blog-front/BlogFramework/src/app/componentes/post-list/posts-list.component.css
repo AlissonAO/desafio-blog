@@ -1,0 +1,10 @@
+.list {
+  text-align: left;
+  max-width: 70%;
+  margin: auto;
+  padding-top: 5%;
+}
+
+#list-post{
+  padding-top: 2%;
+}

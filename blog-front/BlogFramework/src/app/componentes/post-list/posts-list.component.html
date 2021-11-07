@@ -1,0 +1,64 @@
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Pesquisar pelo título"
+        [(ngModel)]="title"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="searchTitle()"
+        >
+          Procurar
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" id="list-post">
+    <h4>Lista de Postagens</h4>
+    <p>Click para ver os detalhes do Post...</p>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let post of posts; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActivePost(post, i)"
+      >
+        {{ post.titulo }}
+      </li>
+    </ul>
+
+    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllPosts()">
+      Remover Todos
+    </button>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentPost" id="list-post">
+      <h4>POST</h4>
+      <div>
+        <label><strong>Titulo:</strong></label> {{ currentPost.titulo }}
+      </div>
+      <div>
+        <label><strong>Mensagem:</strong></label>
+        {{ currentPost.mensagem }}
+      </div>
+      <div>
+        <label><strong>Data do Post:</strong></label>
+        {{ currentPost.date }}
+      </div>
+
+      <a class="badge badge-warning" href="/user/{{ currentPost.id }}">
+        Editar
+      </a>
+    </div>
+
+    <div *ngIf="!currentPost">
+      <br />
+
+    </div>
+  </div>
+</div>

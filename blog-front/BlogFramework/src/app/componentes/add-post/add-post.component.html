@@ -1,0 +1,35 @@
+<div class="submit-form">
+  <div *ngIf="!submitted">
+    <h4>Criar Postagem</h4>
+    <div class="form-group" >
+      <label id="add-post" for="titulo">Titulo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="titulo"
+        required
+        [(ngModel)]="post.titulo"
+        name="titulo"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="mensagem">Mensagem</label>
+      <input
+        class="form-control"
+        id="mensagem"
+        required
+        [(ngModel)]="post.mensagem"
+        name="mensagem"
+
+      />
+    </div>
+
+    <button (click)="savePost()" class="btn btn-success">Enviar</button>
+  </div>
+
+  <div *ngIf="submitted">
+    <h4>Postado com successo!</h4>
+    <button class="btn btn-success" (click)="newPost()">Criar Novo Post</button>
+  </div>
+</div>

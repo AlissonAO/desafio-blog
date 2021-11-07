@@ -1,0 +1,16 @@
+.submit-form {
+  max-width: 50%;
+  margin: auto;
+  padding-top: 5%;
+}
+
+#add-post{
+  padding-top: 5%;
+}
+
+#mensagem{
+  width:100%;
+  height: 200px;
+  white-space: pre-wrap;
+word-wrap: break-word;
+}
