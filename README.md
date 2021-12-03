@@ -48,7 +48,3 @@ Instruções de uso para execução do sistema Back-End (O front é incorporado 
 ![image](https://user-images.githubusercontent.com/457048/140665915-4e72d6e7-42d1-4177-8adf-28bd39a274ce.png)
 
 
-# Obs:
-### Como so tive 2 dias para desenvolver posso ter esquecido de alguma coisa.
-
-"O feito é melhor que o perfeito"
